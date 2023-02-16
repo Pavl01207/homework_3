@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task 4</title>
+</head>
+<body>
+	<style>
+		body {display: flex; 
+			flex-direction: column; 
+			align-items: center; 
+			justify-content: center;
+			gap: 10px;
+			font-size: 20px;
+			background-color: #fdfcdc;
+		}
+		p span { font-weight: 700; color: #9a031e;}
+	</style>
+	<script>
+		/*З клавіатури вводиться вік людини. Вивести на екран ким він є (дитиною у садочку, школярем, студентом, працівником, пенсіонером).*/
+		//отримуємо дані
+		let userAge = parseInt(prompt('Вкажіть ваш вік в роках', '40'))
+		//вносимо дані
+		const ageSchoolboy = 6
+		const ageStudent = 18
+		const ageAdult = 24
+		const ageOldman = 59
+		//створюємо умови
+		if (userAge<ageSchoolboy) document.write(`<p>Вказаний вік: <span>дитина в садку</span></p>`)
+		else if ((userAge>=ageSchoolboy) && (userAge<ageStudent)) document.write(`<p>Вказаний вік: <span>школяр</span></p>`)
+		else if((userAge>=ageStudent) && (userAge<ageAdult)) document.write(`<p>Вказаний вік: <span>студент</span></p>`)
+		else if((userAge>=ageAdult) && (userAge<ageOldman)) document.write(`<p>Вказаний вік: <span>працівник</span></p>`)
+		else document.write(`<p>Вказаний вік: <span>пенсіонер</span></p>`)
+	</script>
+</body>
+</html>

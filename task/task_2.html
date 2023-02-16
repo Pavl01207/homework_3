@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task 2</title>
+</head>
+<body>
+	<style>
+		body {display: flex; 
+			flex-direction: column; 
+			align-items: center; 
+			justify-content: center;
+			gap: 10px;
+			font-size: 20px;
+			background-color: #fdfcdc;
+		}
+		p span { font-weight: 700; color: #9a031e;}
+	</style>
+	<script>
+		/*З клавіатури вводиться ціна товару і кількість грошей. 
+		Якщо грошей не вистачає то відмовляємо у покупці, інакше,
+		якщо ще залишаються гроші, то пропонуємо купити лотерею за 4 грн.*/
+		//отримуємо дані
+		const priceUnit = parseFloat(prompt('Введіть вартість товару', '20грн'))
+		let moneyHave = parseFloat(prompt('Введіть наявні кошти', '20грн'))
+		//створюєму умову
+		if (priceUnit > moneyHave)
+		document.write(`<p><span>Недостатньо</span> коштів для покупки.</p>`)
+		else if ((moneyHave - priceUnit) >= 4)
+		document.write(`<p>Є можливість придбати <span>лотерею</span>.</p>`)
+		else document.write(`<p>Купівля товару <span>можлива</span>.</p>`)
+	</script>
+</body>
+</html>

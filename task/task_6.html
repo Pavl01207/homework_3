@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task 6</title>
+</head>
+<body>
+	<style>
+		body {display: flex; 
+			flex-direction: column; 
+			align-items: center; 
+			justify-content: center;
+			gap: 10px;
+			font-size: 20px;
+			background-color: #fdfcdc;
+		}
+		p span { font-weight: 700; color: #9a031e;}
+	</style>
+	<script>
+		/*З клавіатури вводиться номер дня тижня. Вивести на екран назву дня.*/
+		//отримуємо дані
+		let dayWeek = parseInt(prompt('Введіть номер дня тижня', '2'))
+		//вносимо дані
+		const monday = 1
+		const tuesday = 2
+		const wednesday = 3
+		const thursday = 4
+		const friday = 5
+		const saturday = 6
+		const sunday = 7
+		let result
+		//створюємо умову
+		/*if (dayWeek === monday) document.write(`<p><span>${monday}</span> день тижня - <span>понеділок</span></p>`)
+		else if (dayWeek === tuesday) document.write(`<p><span>${tuesday}</span> день тижня - <span>вівторок</span></p>`)
+		else if (dayWeek === wednesday) document.write(`<p><span>${wednesday}</span> день тижня - <span>середа</span></p>`)
+		else if (dayWeek === thursday) document.write(`<p><span>${thursday}</span> день тижня - <span>четвер</span></p>`)
+		else if (dayWeek === friday) document.write(`<p><span>${friday}</span> день тижня - <span>п'ятниця</span></p>`)
+		else if (dayWeek === saturday) document.write(`<p><span>${saturday}</span> день тижня - <span>субота</span></p>`)
+		else if (dayWeek === sunday) document.write(`<p><span>${sunday}</span> день тижня - <span>неділя</span></p>`)
+		else document.write(`<p>Нажаль тиждень має тільки <span>7</span> днів</p>`) */
+		//методом switch
+		switch (dayWeek) {
+			case monday : result = `<p><span>${monday}</span> день тижня - <span>понеділок</span></p>`;
+			break;
+			case tuesday : result = `<p><span>${tuesday}</span> день тижня - <span>вівторок</span></p>`;
+			break;
+			case wednesday : result = `<p><span>${wednesday}</span> день тижня - <span>середа</span></p>`;
+			break;
+			case thursday : result = `<p><span>${thursday}</span> день тижня - <span>четвер</span></p>`;
+			break;
+			case friday : result = `<p><span>${friday}</span> день тижня - <span>п'ятниця</span></p>`;
+			break;
+			case saturday : result = `<p><span>${saturday}</span> день тижня - <span>субота</span></p>`;
+			break;
+			case sunday : result = `<p><span>${sunday}</span> день тижня - <span>неділя</span></p>`;
+			break;
+			default : result = `<p>Нажаль тиждень має тільки <span>7</span> днів</p>`;
+			break;
+		}
+		document.write(result)
+	</script>
+</body>
+</html>
